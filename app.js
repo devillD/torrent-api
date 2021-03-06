@@ -1,6 +1,6 @@
 const express = require('express');
 const scrap1337x = require('./torrent/1337x')
-const scrapNyaa = require('./torrent/nyaa')
+const scrapNyaa = require('./torrent/nyaasi')
 const scrapYts = require('./torrent/yts')
 const scrapPirateBay = require('./torrent/piratebay')
 const scrapEzTVio = require('./torrent/eztv')

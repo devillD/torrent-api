@@ -3,7 +3,6 @@ const scrap1337x = require('./torrent/1337x')
 const scrapNyaa = require('./torrent/nyaa')
 const scrapYts = require('./torrent/yts')
 const scrapPirateBay = require('./torrent/piratebay')
-const scrapTorLock = require('./torrent/torlock')
 const scrapEzTVio = require('./torrent/eztv')
 
 
@@ -51,19 +50,6 @@ app.use('/:website/:query/:page?', (req, res, next) => {
     }
     if (website === 'eztv') {
         scrapEzTVio.ezTV(query)
-            .then((data) => {
-                if (data.length === 0) {
-                    return res.json({
-                        error: 'No search result available for query (' + query + ')'
-                    })
-                } else {
-                    return res.send(data);
-                }
-
-            })
-    }
-    if (website === 'torlock') {
-        scrapTorLock.torLock(query, page)
             .then((data) => {
                 if (data.length === 0) {
                     return res.json({

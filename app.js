@@ -93,9 +93,9 @@ app.use('/:website/:query/:page?', (req, res, next) => {
                 })
         }
 
-    } else if (website !== 'nyaasi' && website !== '1337x' && website !== 'yts' && website !== 'piratebay' && website !== 'torlock' && website !== 'eztv') {
+    } else if (website !== 'nyaasi' && website !== '1337x' && website !== 'yts' && website !== 'piratebay' && website !== 'eztv') {
         return res.json({
-            error: 'please select 1337x | nyaasi | yts | Piratebay | torlock | eztv'
+            error: 'please select 1337x | nyaasi | yts | Piratebay | eztv'
         })
     }
 
@@ -104,6 +104,6 @@ app.use('/:website/:query/:page?', (req, res, next) => {
 app.use('/', (req, res) => {
     res.send('Access Forbidden');
 });
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 console.log('Listening on PORT : ',PORT);
 app.listen(PORT);

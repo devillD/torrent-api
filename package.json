@@ -19,7 +19,5 @@
     "yargs": "^16.0.3"
   },
   "devDependencies": {},
-  "description": "",
-  "start": "node server.js"
-  
+  "description": ""  
 }
